@@ -1,13 +1,13 @@
 def final_grade():
     labs = int(input("Enter the number of labs completed: "))
     
-    lab_mark = (labs/6)*0.20
+    lab_mark = (labs/6)*20
     if lab_mark >= 20:
         lab_mark = 20
 
     quizzes = int(input("Enter number of quizzes completed: "))
     
-    quiz_mark = (quizzes/6)*0.15
+    quiz_mark = (quizzes/6)*15
     if quiz_mark >= 15:
         quiz_mark = 15
     
@@ -26,12 +26,3 @@ def final_grade():
     final = int(input("Enter grade for Final Exam: "))
     
     final_total = (final)*0.18
-    
-    MidFinP = int(input("Enter garde for Midterms and Final Preparation: "))
-   
-    MidFinP_total = (MidFinP)*0.06
-    
-    final_grade = lab_mark + quiz_mark +ass_mark + midt_mark + final_total + MidFinP_total
-    print(f"Your grade is: {final_grade:.2f}%")
-    
-final_grade()
