@@ -1,0 +1,37 @@
+def final_grade():
+    labs = int(input("Enter the number of labs completed: "))
+    
+    lab_mark = (labs/6)*0.20
+    if lab_mark >= 20:
+        lab_mark = 20
+
+    quizzes = int(input("Enter number of quizzes completed: "))
+    
+    quiz_mark = (quizzes/6)*0.15
+    if quiz_mark >= 15:
+        quiz_mark = 15
+    
+    ass_1 = int(input("Enter grade for Assignment 1: "))
+    ass_2 = int(input("Enter grade for Assignment 2: "))
+    ass_3 = int(input("Enter grade for Assignment 3: "))
+    ass_4 = int(input("Enter garde for Assignment 4: "))
+    
+    ass_mark = ((ass_1 + ass_2 + ass_3 + ass_4)/4)*0.16
+    
+    midt_1 = int(input("Enter grade for Midterm 1: "))
+    midt_2 = int(input("Enter grade for Mideterm 2: "))
+    
+    midt_mark = ((midt_1 + midt_2)/2)*0.25
+    
+    final = int(input("Enter grade for Final Exam: "))
+    
+    final_total = (final)*0.18
+    
+    MidFinP = int(input("Enter garde for Midterms and Final Preparation: "))
+   
+    MidFinP_total = (MidFinP)*0.06
+    
+    final_grade = lab_mark + quiz_mark +ass_mark + midt_mark + final_total + MidFinP_total
+    print(f"Your grade is: {final_grade:.2f}%")
+    
+final_grade()
